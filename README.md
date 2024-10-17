@@ -18,8 +18,11 @@ You will be working with a dataset containing 100 rows of customer IDs, ages, tr
 
 4. The repository includes a pre-configured `devcontainer.json` file, which automatically sets up the Python environment in Codespaces.
 5. Once the Codespace is ready and the environment is set up, review the code in the Python files to understand the structure.
-6. Implement the missing functions marked with **TODO** comments.
-7. Test your implementation by running the `main.py` file inside GitHub Codespaces.
+6. A `requirement.txt` file is added in the repo, which pre-installs the required libraries for the challenge(Don't modify).
+7. `.devcontainer`, `tests`, `.gitignore` and `.github` are protected files and they shouldn't be altered.
+8. Implement the missing functions marked with **TODO** comments.
+9. Test your implementation by running the `main.py` file inside GitHub Codespaces.
+10. Once the codespace changes are committed, your project will be submitted for review. 
 
 ---
 
@@ -48,12 +51,12 @@ You will be working with a dataset containing 100 rows of customer IDs, ages, tr
 
 ## Steps to Follow
 1. Accept the assignment to get your forked repository and set up your environment using **GitHub Codespaces**.
-2. **extract.py**: Implement the logic to extract data from the `bank_transactions_dataset.csv`.
-3. **transform.py**: Implement the transformation logic (e.g., handle missing values, data normalisation).
-4. **load.py**: Implement the loading logic to insert the cleaned data into a SQLite database.
+2. **`extract.py`**: Implement the logic to extract data from the `bank_transactions_dataset.csv`.
+3. **`transform.py`**: Implement the transformation logic (e.g., handle missing values, data normalisation).
+4. **`load.py`**: Implement the loading logic to insert the cleaned data into a SQLite database.
 5. Run the codes inside **GitHub Codespaces** to test your implementation.
 6. After completing the coding on those three files, examine the ETL pipeline in **main.py**.
-7. Run the **main.py** to complete the ETL challenge; your final SQL_database will be created in the repo.
+7. Run the **main.py** to complete the ETL challenge; your final `SQL_database` will be created in the repo.
 8. Commit the changes using the commit button available in the codespace.
  
 
