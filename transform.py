@@ -13,8 +13,10 @@ def handle_missing_values(df):
     Returns:
     - pd.DataFrame: Cleaned data.
     """
-    #TODO
-     return df
+    df = df.dropna()
+    return df
+
+
 
 def normalize_data(df, numerical_cols):
     """
@@ -27,18 +29,21 @@ def normalize_data(df, numerical_cols):
     Returns:
     - pd.DataFrame: Data with normalized columns.
     """
-   #TODO
+     # Create a copy of the DataFrame
+    df = df.copy()
+    for num_col in numerical_cols:
+        scaler = MinMaxScaler()
+        # Change the dtype of the column to float
+        df[num_col] = df[num_col].astype(float)
+        df[num_col] = scaler.fit_transform(df[[num_col]])
+    #df[numerical_cols] = scaler.fit_transform(df[numerical_cols])
+    print(f"Normalized columns: {', '.join(numerical_cols)}")
     return df
+
 
 def transform_data(df):
     """
     Transforms the extracted data by cleaning and preparing it for loading.
-
-    Parameters:
-    - df (pd.DataFrame): Extracted data.
-
-    Returns:
-    - pd.DataFrame: Transformed data.
     """
     if df.empty:
         print("Empty DataFrame received for transformation.")
@@ -52,4 +57,3 @@ def transform_data(df):
 
     print("Data transformation completed.")
     return df
-
