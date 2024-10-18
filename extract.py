@@ -12,7 +12,7 @@ def extract_data(file_path):
     Returns:
     - pd.DataFrame: Extracted data.
     """
-    """TODO"""
+    df = pd.read_csv(file_path)
 
     return df
 
